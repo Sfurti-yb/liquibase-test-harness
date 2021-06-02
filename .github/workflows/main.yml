@@ -104,7 +104,7 @@ jobs:
 
       - name: Build Oracle test infrastructure
         working-directory: src/test/resources/docker/oracle
-        run: docker-compose -f docker-compose.oracle.yml up -d
+        run: docker-compose up -d
 
       - name: Oracle Test Run
         run: mvn -Dtest=LiquibaseHarnessSuiteTest -DdbName=oracle test
@@ -117,7 +117,7 @@ jobs:
 
       - name: Tear down Oracle test infra
         working-directory: src/test/resources/docker/oracle
-        run: docker-compose -f docker-compose.oracle.yml down --volumes
+        run: docker-compose down --volumes
 
       - name: Docker login to retrive EDB images from private repo
         run: docker login "${{ secrets.RT_URL }}" -u "${{ secrets.RT_USER }}" -p "${{ secrets.RT_PWD }}"
