@@ -167,6 +167,26 @@ services:
       - "1523:9092"
     volumes:
       - "./H2-init.sql:/docker-entrypoint-initdb.d/test.sql"
+      
+  yugabytedb-2.6:
+    image: yugabytedb/yugabyte:latest
+    command:  bin/yugabyted start
+    expose:
+      - "7000"
+      - "4000"
+      - "9000"
+      - "5433"
+    ports:
+      - "7000:7000"
+      - "9000:9000"
+      - "5439:5433"
+      - "4000:4000"
+  crdb-21.1-init:
+    image: yugabytedb/yugabyte:latest
+    volumes:
+      - ./yugabytedb.sql:/yugabytedb.sql
+    entrypoint: "/bin/bash"
+    command: /yugabytedb.sql
 
 
   crdb-20.2:
