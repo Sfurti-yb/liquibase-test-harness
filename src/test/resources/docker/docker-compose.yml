@@ -12,7 +12,9 @@ services:
     volumes:
       - ./yugabytedb-init.sh:/yugabytedb-init.sh
     entrypoint: "/bin/bash"
-    command: /yugabytedb-init.sh
+    command: /yugabytedb-init.sh yugabytedb-2.6
+    depends on:
+      - yugabytedb-2.6
 
   mysql-5.6:
     image: library/mysql:5.6
