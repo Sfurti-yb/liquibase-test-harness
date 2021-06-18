@@ -4,7 +4,7 @@ services:
 
   yugabytedb-2.6:
     image: yugabytedb/yugabyte:latest
-    command:  ./bin/yugabyted start
+    command:  bin/yugabyted start
     ports:
       - "7000:7000"
       - "9000:9000"
@@ -13,9 +13,9 @@ services:
   yugabytedb-2.6-init:
     image: yugabytedb/yugabyte:latest
     volumes:
-      - ./yugabytedb.sh:/yugabytedb.sh
+      - ./yugabytedb-init.sh:/yugabytedb-init.sh
     entrypoint: "/bin/bash"
-    command: /yugabytedb.sh
+    command: /yugabytedb-init.sh
 
   mysql-5.6:
     image: library/mysql:5.6
