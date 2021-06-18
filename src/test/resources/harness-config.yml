@@ -157,4 +157,4 @@ databasesUnderTest:
     version: 2.6
     url: jdbc:postgresql://localhost:5433/lbcat
     username: lbuser
-    password: 
+    password: LiquibasePass1
