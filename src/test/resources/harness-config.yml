@@ -155,6 +155,6 @@ databasesUnderTest:
     
   - name: yugabytedb
     version: 2.6
-    url: jdbc:postgresql://localhost:5439/lbcat
+    url: jdbc:postgresql://localhost:5433/lbcat
     username: lbuser
     password: LiquibasePass1
