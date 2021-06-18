@@ -4,12 +4,9 @@ services:
 
   yugabytedb-2.6:
     image: yugabytedb/yugabyte:latest
-    command:  bin/yugabyted start
+    command:  bin/yugabyted start --daemon=false
     ports:
-      - "7000:7000"
-      - "9000:9000"
       - "5439:5433"
-      - "4000:4000"
   yugabytedb-2.6-init:
     image: yugabytedb/yugabyte:latest
     volumes:
