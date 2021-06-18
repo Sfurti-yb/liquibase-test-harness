@@ -8,14 +8,14 @@ services:
     ports:
       - "7000:7000"
       - "9000:9000"
-      - "5439:5433"
+      - "5433:5433"
       - "4000:4000"
-  crdb-21.1-init:
+  yugabytedb-2.6-init:
     image: yugabytedb/yugabyte:latest
     volumes:
-      - ./yugabytedb.sql:/yugabytedb.sql
+      - ./yugabytedb.sh:/yugabytedb.sh
     entrypoint: "/bin/bash"
-    command: /yugabytedb.sql
+    command: /yugabytedb.sh
 
   mysql-5.6:
     image: library/mysql:5.6
