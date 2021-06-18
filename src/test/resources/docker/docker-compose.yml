@@ -5,8 +5,11 @@ services:
   yugabytedb-2.6:
     image: yugabytedb/yugabyte:latest
     command:  bin/yugabyted start --daemon=false
+    restart: always
     ports:
       - "5439:5433"
+    environment:
+      YUGABYTE_DB: lbcat
     volumes:
       - "./yugabytedb-init.sh:/docker-entrypoint-initdb.d/yugabytedb-init.sh"
 
