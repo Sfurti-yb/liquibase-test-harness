@@ -152,3 +152,9 @@ databasesUnderTest:
   - name: derby
     version: 10.14.2.0
     url: jdbc:derby:./src/test/resources/derby/lbcat
+    
+  - name: yugabytedb
+    version: 2.4
+    url: jdbc:postgresql://localhost:5433/lbcat
+    username: yugabyte
+    password: yugabyte
