@@ -2,13 +2,13 @@
 #echo "Wait for servers to be up"
 #sleep 10
 
-SQL="./bin/ysqlsh"
+SQL="bin/ysqlsh"
 
 $SQL -e "CREATE DATABASE lbcat;"
 $SQL -e "CREATE USER lbuser WITH PASSWORD 'LiquibasePass1';"
 $SQL -e "GRANT ALL PRIVILEGES ON DATABASE lbcat TO lbuser;"
 $SQL -e "GRANT ALL PRIVILEGES ON SCHEMA public TO lbuser;"
-$SQL -e "\c"
+$SQL -e "\c lbcat;"
 
 $SQL -e "DROP TABLE IF EXISTS authors;"
 $SQL -e "CCREATE TABLE authors (
