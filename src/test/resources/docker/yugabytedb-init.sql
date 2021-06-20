@@ -1,7 +1,3 @@
-#!/usr/bin/env bash
-set -e
-
-bin/ysqlsh --dbname = "$YUGABYTE_DB" <<-EOSQL
     CREATE USER lbuser WITH PASSWORD 'LiquibasePass1';
     GRANT ALL PRIVILEGES ON DATABASE lbcat TO lbuser;
     GRANT ALL PRIVILEGES ON SCHEMA public TO lbuser;
@@ -38,4 +34,3 @@ bin/ysqlsh --dbname = "$YUGABYTE_DB" <<-EOSQL
     ('3','3','illum','rerum','Delectus recusandae sit officiis dolor.','1975-02-25'),
     ('4','4','itaque','deleniti','Magni nam optio id recusandae.','2010-07-28'),
     ('5','5','ad','similique','Rerum tempore quis ut nesciunt qui excepturi est.','2006-10-09');
-EOSQL
