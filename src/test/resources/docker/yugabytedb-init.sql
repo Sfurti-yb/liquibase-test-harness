@@ -1,3 +1,4 @@
+    CREATE DATABASE lbcat;
     \c lbcat;
     CREATE USER lbuser WITH PASSWORD 'LiquibasePass1';
     GRANT ALL PRIVILEGES ON DATABASE lbcat TO lbuser;
