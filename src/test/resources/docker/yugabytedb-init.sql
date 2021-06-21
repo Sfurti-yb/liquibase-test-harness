@@ -1,8 +1,3 @@
-    CREATE DATABASE lbcat;
-    \c lbcat;
-    CREATE USER lbuser WITH PASSWORD 'LiquibasePass1';
-    GRANT ALL PRIVILEGES ON DATABASE lbcat TO lbuser;
-    GRANT ALL PRIVILEGES ON SCHEMA public TO lbuser;
     DROP TABLE IF EXISTS authors;
     CREATE TABLE authors (
       id SERIAL,
