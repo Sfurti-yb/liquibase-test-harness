@@ -1,4 +1,4 @@
-    \c yugabyte;
+    \c lbcat;
     CREATE USER lbuser WITH PASSWORD 'LiquibasePass1';
     GRANT ALL PRIVILEGES ON DATABASE lbcat TO lbuser;
     GRANT ALL PRIVILEGES ON SCHEMA public TO lbuser;
