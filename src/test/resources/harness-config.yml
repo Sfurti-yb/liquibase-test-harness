@@ -126,7 +126,7 @@ databasesUnderTest:
 
   - name: edb
     version: 11
-    url: jdbc:postgresql://localhost:5504/yugabyte
+    url: jdbc:postgresql://localhost:5504/lbcat
     username: lbuser
     password: LiquibasePass1
 
