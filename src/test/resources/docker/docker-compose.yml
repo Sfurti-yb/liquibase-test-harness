@@ -8,8 +8,6 @@ services:
     restart: always
     ports:
       - "5439:5433"
-    environment:
-      YSQL_DB: lbcat
     volumes:
       - "./yugabytedb-init.sql:/docker-entrypoint-initdb.d/yugabytedb-init.sql"
 
