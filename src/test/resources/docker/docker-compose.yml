@@ -2,6 +2,15 @@ version: '3.3'
 
 services:
 
+  yugabytedb-2.6:
+    image: yugabytedb/yugabyte:latest
+    command:  bin/yugabyted start --daemon=false --initial_scripts_dir /docker-entrypoint-initdb.d
+    restart: always
+    ports:
+      - "5439:5433"
+    volumes:
+      - "./yugabytedb-init.sql:/docker-entrypoint-initdb.d/yugabytedb-init.sql"
+
   mysql-5.6:
     image: library/mysql:5.6
     ports:
@@ -167,7 +176,6 @@ services:
       - "1523:9092"
     volumes:
       - "./H2-init.sql:/docker-entrypoint-initdb.d/test.sql"
-
 
   crdb-20.2:
     image: cockroachdb/cockroach:v20.2.0

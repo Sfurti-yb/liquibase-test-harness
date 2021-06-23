@@ -1,0 +1,1 @@
+../postgresql/dropView.sql
