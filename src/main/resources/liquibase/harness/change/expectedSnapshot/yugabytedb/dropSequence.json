@@ -1,8 +1,1 @@
-{
-  "snapshot": {
-    "objects": {
-      "_noMatch": true,
-      "liquibase.structure.core.Sequence": []
-    }
-  }
-}
+../postgresql/dropSequence.json
