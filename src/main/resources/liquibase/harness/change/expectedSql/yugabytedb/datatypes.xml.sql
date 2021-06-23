@@ -1,1 +1,1 @@
-CREATE TABLE "datatypes.xml_test_table" (xml XML)
+../postgresql/datatypes.xml.sql

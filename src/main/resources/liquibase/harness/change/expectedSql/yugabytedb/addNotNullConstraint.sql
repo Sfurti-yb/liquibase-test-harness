@@ -1,1 +1,1 @@
-ALTER TABLE posts ALTER COLUMN  inserted_date SET NOT NULL
+../postgresql/addNotNullConstraint.sql

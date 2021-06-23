@@ -1,1 +1,1 @@
-CREATE TABLE "datatypes.boolean_test_table" (boolean BOOLEAN)
+../postgresql/datatypes.boolean.sql

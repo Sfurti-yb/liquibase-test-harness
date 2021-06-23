@@ -1,1 +1,1 @@
-ALTER TABLE posts ALTER COLUMN  inserted_date SET DEFAULT NOW()
+../postgresql/addDefaultValueComputed.sql

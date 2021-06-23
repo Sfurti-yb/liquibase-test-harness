@@ -1,1 +1,1 @@
-CREATE TABLE "createTableDataTypeText" ("textCol" TEXT)
+../postgresql/createTableDataTypeText.sql
